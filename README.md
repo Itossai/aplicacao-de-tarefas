@@ -39,6 +39,67 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
+## 📋 Funcionalidades do Projeto
+
+Este projeto é uma aplicação de gerenciamento de tarefas desenvolvida com React, implementando diversos conceitos e padrões modernos de desenvolvimento.
+
+### Configuração do Ambiente
+
+O projeto foi configurado utilizando **Create React App**, que fornece uma estrutura pronta para desenvolvimento React com ferramentas pré-configuradas como:
+- Webpack para bundling
+- Babel para transpilação de código moderno
+- ESLint para verificação de código
+- Jest para testes
+
+### React Router
+
+A aplicação utiliza **React Router** para gerenciamento de rotas e navegação entre páginas:
+
+- **Página Home**: Exibe a lista de tarefas cadastradas
+- **Página Adicionar Tarefa**: Formulário para criar novas tarefas
+- Navegação fluida entre diferentes seções da aplicação
+
+Para instalar o React Router:
+```bash
+npm install react-router-dom
+```
+
+### Context API
+
+Implementamos um **Context API** para gerenciamento centralizado do estado global das tarefas:
+
+- Criamos um contexto para armazenar tarefas
+- Utilizamos um provedor (Provider) para disponibilizar o estado para toda a aplicação
+- Reduz a necessidade de prop drilling
+- Facilita o compartilhamento de estado entre componentes distantes
+
+### Hooks
+
+A aplicação faz uso extensivo dos hooks do React:
+
+- **useState**: Gerencia o estado local de componentes (tarefas, formulários, filtros, etc.)
+- **useEffect**: Gerencia efeitos colaterais como:
+  - Carregamento de dados ao montar o componente
+  - Sincronização com localStorage
+  - Limpeza de recursos
+
+### CRUD de Tarefas
+
+Implementamos todas as operações CRUD (Create, Read, Update, Delete):
+
+- **Create (Criar)**: Adicionar novas tarefas através de um formulário
+- **Read (Ler)**: Visualizar a lista completa de tarefas cadastradas
+- **Update (Atualizar)**: Editar tarefas existentes
+- **Delete (Excluir)**: Remover tarefas da lista
+
+### Persistência de Dados
+
+As tarefas são persistidas utilizando **localStorage**:
+
+- Todos os dados de tarefas são salvos automaticamente no navegador
+- As tarefas permanecem entre sessões (mesmo após fechar o navegador)
+- Implementado com `useEffect` para sincronização automática
+
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
